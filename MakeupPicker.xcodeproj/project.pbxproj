@@ -13,6 +13,10 @@
 		38C0860D2423B5C000EB15A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C0860B2423B5C000EB15A4 /* Main.storyboard */; };
 		38C0860F2423B5C100EB15A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C0860E2423B5C100EB15A4 /* Assets.xcassets */; };
 		38C086122423B5C100EB15A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C086102423B5C100EB15A4 /* LaunchScreen.storyboard */; };
+		38C0861A2423B72A00EB15A4 /* MakeupStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C086192423B72A00EB15A4 /* MakeupStore.swift */; };
+		38C0861C2423B84400EB15A4 /* Makeup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C0861B2423B84400EB15A4 /* Makeup.swift */; };
+		38C086212423C5F100EB15A4 /* MakeupListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C0861F2423C5F100EB15A4 /* MakeupListCell.swift */; };
+		38C086222423C5F100EB15A4 /* MakeupListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C086202423C5F100EB15A4 /* MakeupListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		38C0860E2423B5C100EB15A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38C086112423B5C100EB15A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38C086132423B5C100EB15A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38C086192423B72A00EB15A4 /* MakeupStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeupStore.swift; sourceTree = "<group>"; };
+		38C0861B2423B84400EB15A4 /* Makeup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Makeup.swift; sourceTree = "<group>"; };
+		38C0861F2423C5F100EB15A4 /* MakeupListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeupListCell.swift; sourceTree = "<group>"; };
+		38C086202423C5F100EB15A4 /* MakeupListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeupListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				38C0860E2423B5C100EB15A4 /* Assets.xcassets */,
 				38C086102423B5C100EB15A4 /* LaunchScreen.storyboard */,
 				38C086132423B5C100EB15A4 /* Info.plist */,
+				38C086192423B72A00EB15A4 /* MakeupStore.swift */,
+				38C0861B2423B84400EB15A4 /* Makeup.swift */,
+				38C0861F2423C5F100EB15A4 /* MakeupListCell.swift */,
+				38C086202423C5F100EB15A4 /* MakeupListCell.xib */,
 			);
 			path = MakeupPicker;
 			sourceTree = "<group>";
@@ -127,6 +139,7 @@
 			files = (
 				38C086122423B5C100EB15A4 /* LaunchScreen.storyboard in Resources */,
 				38C0860F2423B5C100EB15A4 /* Assets.xcassets in Resources */,
+				38C086222423C5F100EB15A4 /* MakeupListCell.xib in Resources */,
 				38C0860D2423B5C000EB15A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C086212423C5F100EB15A4 /* MakeupListCell.swift in Sources */,
+				38C0861A2423B72A00EB15A4 /* MakeupStore.swift in Sources */,
 				38C0860A2423B5C000EB15A4 /* ViewController.swift in Sources */,
+				38C0861C2423B84400EB15A4 /* Makeup.swift in Sources */,
 				38C086062423B5C000EB15A4 /* AppDelegate.swift in Sources */,
 				38C086082423B5C000EB15A4 /* SceneDelegate.swift in Sources */,
 			);
