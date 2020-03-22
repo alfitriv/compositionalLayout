@@ -12,7 +12,7 @@ struct Makeup: Codable {
     var id: Int
     var brand: String?
     var productType: ProductType?
-    var imageLink: String
+    var imageLink: String?
     
     private enum CodingKeys : String, CodingKey {
         case id

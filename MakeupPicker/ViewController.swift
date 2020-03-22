@@ -35,8 +35,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MakeupListCell
         let makeup = makeupList[indexPath.row]
-        cell.nameLabel.text = makeup.brand
+        cell.setupView(makeup)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
 }
 
