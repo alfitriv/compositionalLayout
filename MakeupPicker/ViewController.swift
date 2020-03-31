@@ -84,6 +84,7 @@ class ViewController: UIViewController, UIActionSheetDelegate {
         )
         
         let section = NSCollectionLayoutSection(group: nestedGroup)
+        section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
         
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
