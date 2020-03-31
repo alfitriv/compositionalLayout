@@ -27,14 +27,13 @@ class ViewController: UIViewController, UIActionSheetDelegate {
             self?.makeupList = makeup
             self?.collectionView.register(UINib(nibName: "MakeupCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
             self?.collectionView.reloadData()
-            self?.collectionView.collectionViewLayout = self?.generateFlowLayout() as! UICollectionViewLayout
+            self?.collectionView.collectionViewLayout = self?.generateFirstLayout() as! UICollectionViewLayout
         }) { (error) in
             print(error)
         }
-        
     }
     
-    func generateFlowLayout() -> UICollectionViewLayout {
+    func generateFirstLayout() -> UICollectionViewLayout {
         let fullPhotoItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(2/3)))
         
         fullPhotoItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
@@ -91,7 +90,7 @@ class ViewController: UIViewController, UIActionSheetDelegate {
         
     }
     
-    func generateSideBySideLayout() -> UICollectionViewLayout {
+    func generateSecondLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let fullPhotoItem = NSCollectionLayoutItem(layoutSize: itemSize)
         fullPhotoItem.contentInsets = NSDirectionalEdgeInsets(
@@ -107,7 +106,7 @@ class ViewController: UIViewController, UIActionSheetDelegate {
         return layout
     }
     
-    func generateFullLayout() -> UICollectionViewLayout {
+    func generateThirdLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let fullPhotoItem = NSCollectionLayoutItem(layoutSize: itemSize)
         fullPhotoItem.contentInsets = NSDirectionalEdgeInsets(
@@ -115,8 +114,8 @@ class ViewController: UIViewController, UIActionSheetDelegate {
             leading: 2,
             bottom: 2,
             trailing: 2)
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [fullPhotoItem])
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(1.0))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [fullPhotoItem])
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
@@ -127,15 +126,15 @@ class ViewController: UIViewController, UIActionSheetDelegate {
         let alertController = UIAlertController(title: "Change Layout", message: "Choose the following", preferredStyle: .actionSheet)
         let firstAction = UIAlertAction(title: "First Layout", style: .default, handler: { (action) in
             print("user clicked first action")
-            self.collectionView.collectionViewLayout = self.generateFlowLayout()
+            self.collectionView.collectionViewLayout = self.generateFirstLayout()
             self.collectionView.reloadData()
         })
         let secondAction = UIAlertAction(title: "Second Layout", style: .default, handler: { (action) in
-            self.collectionView.collectionViewLayout = self.generateSideBySideLayout()
+            self.collectionView.collectionViewLayout = self.generateSecondLayout()
             self.collectionView.reloadData()
         })
         let thirdAction = UIAlertAction(title: "Third Layout", style: .default, handler: { _ in
-            self.collectionView.collectionViewLayout = self.generateFullLayout()
+            self.collectionView.collectionViewLayout = self.generateThirdLayout()
             self.collectionView.reloadData()
         })
         
