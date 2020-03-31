@@ -18,6 +18,10 @@
 		38C086212423C5F100EB15A4 /* MakeupListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C0861F2423C5F100EB15A4 /* MakeupListCell.swift */; };
 		38C086222423C5F100EB15A4 /* MakeupListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C086202423C5F100EB15A4 /* MakeupListCell.xib */; };
 		38C08625242509D100EB15A4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 38C08624242509D100EB15A4 /* Kingfisher */; };
+		38C086282427625300EB15A4 /* MakeupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C086262427625300EB15A4 /* MakeupCollectionViewCell.swift */; };
+		38C086292427625300EB15A4 /* MakeupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C086272427625300EB15A4 /* MakeupCollectionViewCell.xib */; };
+		38C086302427958200EB15A4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C0862E2427958200EB15A4 /* DetailViewController.swift */; };
+		38C086312427958200EB15A4 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C0862F2427958200EB15A4 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		38C0861B2423B84400EB15A4 /* Makeup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Makeup.swift; sourceTree = "<group>"; };
 		38C0861F2423C5F100EB15A4 /* MakeupListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeupListCell.swift; sourceTree = "<group>"; };
 		38C086202423C5F100EB15A4 /* MakeupListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeupListCell.xib; sourceTree = "<group>"; };
+		38C086262427625300EB15A4 /* MakeupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeupCollectionViewCell.swift; sourceTree = "<group>"; };
+		38C086272427625300EB15A4 /* MakeupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeupCollectionViewCell.xib; sourceTree = "<group>"; };
+		38C0862E2427958200EB15A4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		38C0862F2427958200EB15A4 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,10 @@
 				38C0861B2423B84400EB15A4 /* Makeup.swift */,
 				38C0861F2423C5F100EB15A4 /* MakeupListCell.swift */,
 				38C086202423C5F100EB15A4 /* MakeupListCell.xib */,
+				38C086262427625300EB15A4 /* MakeupCollectionViewCell.swift */,
+				38C086272427625300EB15A4 /* MakeupCollectionViewCell.xib */,
+				38C0862E2427958200EB15A4 /* DetailViewController.swift */,
+				38C0862F2427958200EB15A4 /* DetailViewController.xib */,
 			);
 			path = MakeupPicker;
 			sourceTree = "<group>";
@@ -146,7 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C086122423B5C100EB15A4 /* LaunchScreen.storyboard in Resources */,
+				38C086312427958200EB15A4 /* DetailViewController.xib in Resources */,
 				38C0860F2423B5C100EB15A4 /* Assets.xcassets in Resources */,
+				38C086292427625300EB15A4 /* MakeupCollectionViewCell.xib in Resources */,
 				38C086222423C5F100EB15A4 /* MakeupListCell.xib in Resources */,
 				38C0860D2423B5C000EB15A4 /* Main.storyboard in Resources */,
 			);
@@ -160,11 +174,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C086212423C5F100EB15A4 /* MakeupListCell.swift in Sources */,
+				38C086282427625300EB15A4 /* MakeupCollectionViewCell.swift in Sources */,
 				38C0861A2423B72A00EB15A4 /* MakeupStore.swift in Sources */,
 				38C0860A2423B5C000EB15A4 /* ViewController.swift in Sources */,
 				38C0861C2423B84400EB15A4 /* Makeup.swift in Sources */,
 				38C086062423B5C000EB15A4 /* AppDelegate.swift in Sources */,
 				38C086082423B5C000EB15A4 /* SceneDelegate.swift in Sources */,
+				38C086302427958200EB15A4 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

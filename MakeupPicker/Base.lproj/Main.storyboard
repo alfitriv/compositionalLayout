@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,40 +16,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N6N-xX-CYc">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8fE-KB-B8b">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.82738025053576369" green="0.64574895876715366" blue="0.83484692258883242" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nUJ-G6-UDd">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="yCt-7e-XvX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kSw-nX-O2i">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mry-AX-bXl">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="K9Z-Wa-jMr"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PAX-kk-m0S"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5Fo-tw-lzc"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tBU-TG-98C"/>
                                 </connections>
-                            </tableView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N6N-xX-CYc" secondAttribute="bottom" id="GPk-NS-d6g"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N6N-xX-CYc" secondAttribute="trailing" id="H1f-ry-NRG"/>
-                            <constraint firstItem="N6N-xX-CYc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="X5w-B6-Ymp"/>
-                            <constraint firstItem="N6N-xX-CYc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ebw-H3-x7g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8fE-KB-B8b" secondAttribute="bottom" id="MtC-wC-BX5"/>
+                            <constraint firstItem="8fE-KB-B8b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UkE-IM-1a9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8fE-KB-B8b" secondAttribute="trailing" id="Z31-03-aeq"/>
+                            <constraint firstItem="8fE-KB-B8b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yt6-1a-ebQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="X5r-Ar-gTQ"/>
+                    <navigationItem key="navigationItem" id="X5r-Ar-gTQ">
+                        <barButtonItem key="rightBarButtonItem" title="Change Layout" id="Duv-jZ-Glf">
+                            <connections>
+                                <action selector="changeLayoutTapped:" destination="BYZ-38-t0r" id="Qfl-nN-6ar"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="N6N-xX-CYc" id="Hc7-ec-Svy"/>
+                        <outlet property="collectionView" destination="8fE-KB-B8b" id="VhS-GI-zPE"/>
+                        <outlet property="progressIndicator" destination="yCt-7e-XvX" id="gNF-He-whA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Makeup List-->
         <scene sceneID="Hh2-sM-zcu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jDk-7r-uWP" sceneMemberID="viewController">
+                <navigationController title="Makeup List" automaticallyAdjustsScrollViewInsets="NO" id="jDk-7r-uWP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ax4-Kp-mYQ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Ax4-Kp-mYQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
